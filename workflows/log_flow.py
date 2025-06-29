@@ -4,7 +4,7 @@ import datetime as dt
 from langchain_config import llm
 from json_storage import write_log
 
-def log_flow(text: str) -> str:
+def log_flow(text: str, user_id: str) -> str:
     """
     Uses an LLM to extract structured data from a user's natural language
     input and saves it as a JSON log entry.
@@ -35,9 +35,9 @@ JSON:'''
 
     # 3. Add timestamp and persist
     data['timestamp'] = dt.datetime.utcnow().isoformat()
-    write_log(data)
+    write_log(data, user_id=user_id)
 
-    # 4. Return a clean confirmation
+    # 4. Return a more detailed confirmation
     item = data.get('item', 'something')
     action = data.get('action', 'logged')
     return f"✅ Logged: {action.capitalize()} of {item}."

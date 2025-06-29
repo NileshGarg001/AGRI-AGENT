@@ -1,0 +1,54 @@
+[
+  {
+    "action": "sell",
+    "item": "raspberries",
+    "quantity": "10",
+    "unit": "pints",
+    "value_usd": "50",
+    "note": " Sold at the market stand.",
+    "timestamp": "2025-06-29T12:04:15.927824"
+  },
+  {
+    "action": "expense",
+    "item": "organic fertilizer",
+    "quantity": "1",
+    "unit": "pounds",
+    "value_usd": "80",
+    "note": "Spent $80 on organic fertilizer.",
+    "timestamp": "2025-06-29T12:06:13.697132"
+  },
+  {
+    "action": "harvest",
+    "item": "basil",
+    "quantity": 5,
+    "unit": "pounds",
+    "value_usd": 10,
+    "note": "Today I harvested 5 pounds of basil from the greenhouse.",
+    "timestamp": "2025-06-29T12:08:35.246355"
+  },
+  {
+    "action": "record",
+    "item": "lavender bunches",
+    "quantity": 15,
+    "unit": "bunches",
+    "value_usd": 100,
+    "note": "sold to florist",
+    "timestamp": "2025-06-29T12:09:57.853596"
+  },
+  {
+    "action": "purchase",
+    "item": "gardening gloves",
+    "quantity": 1,
+    "unit": "pair",
+    "value_usd": 25,
+    "timestamp": "2025-06-29T12:10:14.046690"
+  },
+  {
+    "action": "sale",
+    "item": "mixed herb bundles",
+    "quantity": 1,
+    "unit": "bundles",
+    "value_usd": 60,
+    "timestamp": "2025-06-29T12:11:15.080245"
+  }
+]

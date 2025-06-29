@@ -1,0 +1,55 @@
+[
+  {
+    "action": "sale",
+    "item": "carrots",
+    "quantity": 50,
+    "unit": "pounds",
+    "value_usd": 75,
+    "note": "sold to the local market",
+    "timestamp": "2025-06-29T11:25:12.394967"
+  },
+  {
+    "action": "expense",
+    "item": "irrigation pipes",
+    "quantity": "1",
+    "unit": "pipes",
+    "value_usd": "120",
+    "timestamp": "2025-06-29T11:26:12.379725"
+  },
+  {
+    "action": "harvest",
+    "item": "potatoes",
+    "quantity": 200,
+    "unit": "pounds",
+    "value_usd": 2000,
+    "note": "200 pounds of potatoes from the north field",
+    "timestamp": "2025-06-29T11:45:24.504656"
+  },
+  {
+    "action": "sell",
+    "item": "eggs",
+    "quantity": 10,
+    "unit": "dozen",
+    "value_usd": 40,
+    "note": "I sold 10 dozen eggs for $40",
+    "timestamp": "2025-06-29T11:45:35.096830"
+  },
+  {
+    "action": "purchase",
+    "item": "chicken feed",
+    "quantity": "1",
+    "unit": "bag",
+    "value_usd": "60",
+    "note": "I bought chicken feed for $60.",
+    "timestamp": "2025-06-29T11:45:51.109801"
+  },
+  {
+    "action": "sell",
+    "item": "heads of lettuce",
+    "quantity": 30,
+    "unit": "heads",
+    "value_usd": 45,
+    "note": "Sold to the local cafe.",
+    "timestamp": "2025-06-29T11:50:20.980180"
+  }
+]

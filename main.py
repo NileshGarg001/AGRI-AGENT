@@ -30,7 +30,15 @@ classifier_chain = routing_prompt | llm | StrOutputParser()
 
 # 3. Main CLI loop with debug
 if __name__ == "__main__":
-    print("Agri-Agent CLI – type 'exit' to quit")
+    # Ask for user email, with a default
+    email_input = input("Enter your email to begin (or press Enter for testuser@gmail.com): ").strip()
+    if not email_input:
+        current_user_id = "testuser@gmail.com"
+    else:
+        current_user_id = email_input
+    
+    print(f"\nAgri-Agent CLI – Logged in as {current_user_id}. Type 'exit' to quit.")
+
     while True:
         user_input = input("🎙️ ").strip()
         if user_input.lower() in ("exit", "quit", ""):  
@@ -38,7 +46,6 @@ if __name__ == "__main__":
 
         # classify intent
         try:
-            # The new chain directly outputs a clean, stripped string
             intent = classifier_chain.invoke({"user_input": user_input}).strip()
         except Exception as e:
             print(f"⚠️ Classification error: {e}\n")
@@ -48,11 +55,11 @@ if __name__ == "__main__":
         # dispatch to the right workflow
         try:
             if intent == "LOG":
-                output = log_flow(user_input)
+                output = log_flow(user_input, user_id=current_user_id)
             elif intent == "QUERY":
-                output = query_flow(user_input)
+                output = query_flow(user_input, user_id=current_user_id)
             elif intent == "REPORT":
-                output = report_flow(user_input)
+                output = report_flow(user_input, user_id=current_user_id)
             elif intent == "GENERAL":
                 output = general_flow(user_input)
             else:

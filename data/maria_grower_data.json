@@ -1,0 +1,61 @@
+[
+  {
+    "action": "sold",
+    "item": "bushels of honeycrisp apples",
+    "quantity": 10,
+    "unit": "bushels",
+    "value_usd": 200,
+    "note": "I sold 10 bushels of honeycrisp apples for $200.",
+    "timestamp": "2025-06-29T12:22:06.185555"
+  },
+  {
+    "action": "expense",
+    "item": "bee hives",
+    "quantity": 2,
+    "unit": "number",
+    "value_usd": 300,
+    "note": "two new bee hives",
+    "timestamp": "2025-06-29T12:22:17.521594"
+  },
+  {
+    "action": "sale",
+    "item": "20 jars of honey",
+    "quantity": 20,
+    "unit": "jar",
+    "value_usd": 150,
+    "timestamp": "2025-06-29T12:22:30.772717"
+  },
+  {
+    "action": "sale",
+    "item": "20 jars of honey",
+    "quantity": 20,
+    "unit": "jar",
+    "value_usd": 150,
+    "timestamp": "2025-06-29T12:22:52.581225"
+  },
+  {
+    "action": "harvest",
+    "item": "pumpkins",
+    "quantity": 50,
+    "unit": "pumpkins",
+    "value_usd": 0,
+    "timestamp": "2025-06-29T12:29:17.592335"
+  },
+  {
+    "action": "purchase",
+    "item": "new signs",
+    "quantity": 1,
+    "unit": "$, signs",
+    "value_usd": 75,
+    "note": "for the farm stand",
+    "timestamp": "2025-06-29T12:29:25.476530"
+  },
+  {
+    "action": "sell",
+    "item": "apple cider",
+    "quantity": 15,
+    "unit": "gallons",
+    "value_usd": 120,
+    "timestamp": "2025-06-29T12:29:33.066615"
+  }
+]

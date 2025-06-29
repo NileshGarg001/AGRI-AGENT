@@ -2,22 +2,28 @@
 import json
 import os
 
-DATA_FILE = os.path.join("data", "farm_data.json")
+def get_data_file_path(user_id: str) -> str:
+    """Generates a safe filename for the user's data from their user ID."""
+    # Sanitize email to create a safe filename, e.g., "testuser@gmail.com" -> "testuser_data.json"
+    safe_filename = user_id.split('@')[0].replace('.', '_') + "_data.json"
+    return os.path.join("data", safe_filename)
 
-def read_logs():
-    """Reads all logs from the JSON file."""
-    if not os.path.exists(DATA_FILE):
+def read_logs(user_id: str):
+    """Reads all logs for a specific user from their JSON file."""
+    data_file = get_data_file_path(user_id)
+    if not os.path.exists(data_file):
         return []
     try:
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
+        with open(data_file, "r", encoding="utf-8") as f:
             return json.load(f)
     except (json.JSONDecodeError, FileNotFoundError):
         return []
 
-def write_log(entry: dict):
-    """Appends a new log entry to the JSON file."""
-    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
-    logs = read_logs()
+def write_log(entry: dict, user_id: str):
+    """Appends a new log entry to a specific user's JSON file."""
+    data_file = get_data_file_path(user_id)
+    os.makedirs(os.path.dirname(data_file), exist_ok=True)
+    logs = read_logs(user_id)
     logs.append(entry)
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
+    with open(data_file, "w", encoding="utf-8") as f:
         json.dump(logs, f, indent=2, ensure_ascii=False) 

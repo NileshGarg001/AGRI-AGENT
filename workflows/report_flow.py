@@ -4,13 +4,13 @@ import json
 from langchain_config import llm
 from json_storage import read_logs
 
-def report_flow(text: str) -> str:
+def report_flow(text: str, user_id: str) -> str:
     """
     Generates a formatted text report by providing all existing logs to an
     LLM as context (RAG pattern).
     """
     # 1. Retrieve all logs
-    logs = read_logs()
+    logs = read_logs(user_id=user_id)
     if not logs:
         return "⚠️ No logs found. Please log some data first."
 
