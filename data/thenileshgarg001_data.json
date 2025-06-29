@@ -1,0 +1,10 @@
+[
+  {
+    "action": "purchase",
+    "item": "fertilizer",
+    "quantity": "30",
+    "unit": "pounds",
+    "value_usd": "21",
+    "timestamp": "2025-06-29T14:10:09.665425"
+  }
+]
