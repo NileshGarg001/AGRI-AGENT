@@ -1,0 +1,12 @@
+# Environment variables
+.env
+
+# Python virtual environment
+agri-env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data files
+data/farm_data.json 
